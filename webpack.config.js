@@ -35,7 +35,7 @@ module.exports = {
         use: [
           // 순서 중요!! (가장 마지막순으로 입력)
           'vue-style-loader',
-          'style-loader',
+          // 'style-loader',
           'css-loader',
           'postcss-loader',
           'sass-loader'
