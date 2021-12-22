@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
+import Movie from './Movie'
 import About from './About'
 
 export default createRouter( {
@@ -12,6 +13,10 @@ export default createRouter( {
       // 페이지를 구분해주는 각각의 경로
       path: '/',
       component: Home
+    },
+    {
+      path: '/movie',
+      component: Movie
     },
     {
       path: '/about',
