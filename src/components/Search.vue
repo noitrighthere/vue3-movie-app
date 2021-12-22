@@ -4,7 +4,8 @@
       v-model="title" 
       class="form-control"
       type="text"
-      placeholder="Search for Movies, Series & more" />
+      placeholder="Search for Movies, Series & more" 
+      @keyup.enter="apply"/>
     <div class="selects">
       <select
         v-for="filter in filters"
@@ -23,6 +24,11 @@
         </option>
       </select>
     </div>
+    <div 
+      class="btn btn-primary"
+      @click="apply">
+      Apply
+      </div>
   </div>
 </template>
 
@@ -58,6 +64,17 @@ export default {
       }
       ]
     }
+  },
+  methods: {
+    // 비동기 처리
+    async apply() {
+      this.$store.dispatch('movie/searchMovies', {
+        title: this.title,
+        type: this.type,
+        number: this.number,
+        year: this.year
+      })
+    }
   }
 }
 </script>
@@ -81,6 +98,12 @@ export default {
         margin-right: 0;
       }
     }
+  }
+  .btn {
+    width: 120px;
+    height: 50px;
+    font-weight: 700;
+    flex-shrink: 1;
   }
 }
 </style>
