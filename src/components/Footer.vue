@@ -4,7 +4,7 @@
     <a 
       href="https://github.com/noitrighthere"
       target="_blank">
-      (c){{ new Date().gerFullYear() }} noitrighthere
+      (c){{ new Date().getFullYear() }} noitrighthere
     </a>
   </footer>
 </template>

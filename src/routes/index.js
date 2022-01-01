@@ -15,7 +15,7 @@ export default createRouter( {
       component: Home
     },
     {
-      path: '/movie',
+      path: '/movie/:hello',
       component: Movie
     },
     {
